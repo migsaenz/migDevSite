@@ -1,9 +1,9 @@
 <h3>HomeLab</h3>
 
-![[unraidDash.png]]
+![[unraidDash.png|800]]
 
 **Years Active:** 2022-Present<br>
-This project revolved around my creation of a sandbox environment, "HomeLab" or server for the hosting of files and home media as well as running a number of personal services. Its primary usage is to run virtual machines, useful docker instances, and experiment with applications separately from daily driver systems, as well as creating a unified "coding hub", elaborated upon in the relevant [[HomeLab|writeup (soon to come)]].
+This project revolved around my creation of a sandbox environment, "HomeLab" or server for the hosting of files and home media as well as running a number of personal services. Its primary usage is to run virtual machines, useful docker instances, and experiment with applications separately from daily driver systems, as well as creating a unified "coding hub", elaborated upon in the relevant [[HomeLab|writeup]].
 <br>**Relevant Skills:** SSH SFTP, VIM, Shell Management, Hypervisor, Docker, VPN, Proxying, Networking, Linux, etc. <br>
 
 <h3>Mini-Bot</h3>
