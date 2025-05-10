@@ -5,7 +5,7 @@ title: Home
 
 ![[iFixitMe.jpg]]
 
-Welcome to my site! I am a student and researcher focused on robotics, embedded and distributed systems, and low level programming. I've been a part of robotics for nearly a decade throughout my youth and through to the present day.
+Welcome to my site! I am a student and researcher focused on robotics, data science, embedded and distributed systems, and low level programming. I've been a part of robotics for nearly a decade throughout my youth and through to the present day.
 
 I am currently an undergrad pursuing a Bachelors Degree in Computer Science at Cal Poly San Luis Obispo. I have also been lucky enough to pursue [[Research Hub|research]] at Cal Poly, both over Summer 2024 and continuing this Winter Quarter 2025. I am deeply involved with a number of organizations on campus, chief among them being our robotics(link to website) team, which I have [[Robotics Hub|contributed]] to steadily and significantly throughout the past several years. 
 
