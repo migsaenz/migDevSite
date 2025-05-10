@@ -23,20 +23,35 @@ The finalized idea ended up being a combination of the mobile storage robot and 
 
 <h3>BOM (Bill of Materials)</h3>
 
-| Part             | Part Selected                                                              | Quantity | Price (per item) | Price (no ship/tax) |     |
-| ---------------- | -------------------------------------------------------------------------- | -------- | ---------------- | ------------------- | --- |
-| Processor        | Raspberry Pi 5                                                             | 1        | 44               | 44                  |     |
-| Webcam           | Playstation Camera                                                         | 2        | 25               | 50                  |     |
-| Battery          | LiPo 5000 mah (2 pack)                                                     | 1        | 55               | 55                  |     |
-| Motor            | 10:1 Metal Gearmotor 37Dx65L mm 12V with 64 CPR Encoder (Helical Pinion)   | 2        | 0                | 0                   |     |
-| Motor Controller | HiLetGo 43A Motor Controller                                               | 2        | 11               | 22                  |     |
-| Screws           | Negligible                                                                 | 0        | 0                | 0                   |     |
-| Lidar            | RPLidar A1M8                                                               | 1        | 85               | 85                  |     |
-| Speaker          | MakerHawk 3 watt 8 ohm                                                     | 1        | 12               | 12                  |     |
-| Wheels           | Pololu 90mm (2 pack)                                                       | 1        | 8                | 8                   |     |
-| Buck Converter   | DWEII 12V to 5V Converter                                                  | 2        | 15               | 30                  |     |
-| Terminal Block   | Joinfworld 35A Terminal Block                                              | 2        | 9                | 18                  |     |
-| Base Plates      | Wooden slabs found in materials salvage in the Cal Poly Robotics Club room | 3        | 0                | 0                   |     |
+| Part             | Part Selected                 | Quantity | Price (per item) | Price (no ship/tax) |     |
+| ---------------- | ----------------------------- | -------- | ---------------- | ------------------- | --- |
+| Processor        | Raspberry Pi 5                | 1        | 44               | 44                  |     |
+| Webcam           | Playstation Camera            | 2        | 25               | 50                  |     |
+| Battery          | LiPo 5000 mah (2 pack)        | 1        | 55               | 55                  |     |
+| Motor            | Pololu 10:1 Metal Gearmotor   | 2        | 0                | 0                   |     |
+| Motor Controller | HiLetGo 43A Motor Controller  | 2        | 11               | 22                  |     |
+| Screws           | Negligible                    | 0        | 0                | 0                   |     |
+| Lidar            | RPLidar A1M8                  | 1        | 85               | 85                  |     |
+| Speaker          | MakerHawk 3 watt 8 ohm        | 1        | 12               | 12                  |     |
+| Wheels           | Pololu 90mm (2 pack)          | 1        | 8                | 8                   |     |
+| Buck Converter   | DWEII 12V to 5V Converter     | 2        | 15               | 30                  |     |
+| Terminal Block   | Joinfworld 35A Terminal Block | 2        | 9                | 18                  |     |
+| Base Plates      | 1/4" Wooden Slabs             | 3        | 0                | 0                   |     |
 
 <h3>CAD (Creation of Models for Manufacturing)</h3>
-After we had decided on a finalized set of components for our robot we were able to start designing the relevant components we would need to begin manufacturing 
+After we had decided on a finalized set of components for our robot we were able to start designing the relevant components we would need to begin manufacturing. We settled on simple wooden plates for structural components as we wanted to focus more on the software component than mechanical design component. We also designed a number of 3D printed components that serve as support material and fasteners for all of the valuable electronic components. The current state of that CAD is depicted below:
+
+
+![[trackBotCurrent.png|800]]
+
+<h3>Manufacturing, Assembly, and Debugging</h3>
+This was supposed to be an exceedingly fast and straightforward step in the process, but of course as all engineering tasks go that was not the case. The initial manufacturing of all of the wooden planks went pretty seamlessly, but all of the electrical wiring posed a serious threat. For starters, I had overlooked how we were going to power the Raspberry Pi we were intending to use for all of the processing and control on the robot. I assumed just a standard 5v buck converter from our terminal block would do the trick, but there are very specific USB-C specs that the Pi requires. Luckily, I had a portable charger that met the specifications, and that has done the trick up until this point. If we have time at the end of the project we will look into a more elegant solution, but with only a few weeks left I find it rather unlikely that we will be able to implement a better solution than the current one. Here's the current mechanical state of the robot: 
+
+ ![[sengBotOldTop.jpg|800]]
+ 
+
+![[sengbotSideOld.jpg|800]]
+
+There was also a strange (and to this point not reproducible) issue one night where our motor controllers simply would not respond to any signals. We debugged this issue for hours upon hours, and eventually deduced that we must have somehow fried the motors with improper circuitry. I ordered some replacements as they were so cheap, and when they arrived and I intended to install them, I figured, why not rewire and rewrite the current drive test code just as a final sanity check on the existing motor controllers. Lo and behold that worked as shown by our current 60% drive forward for 10 seconds video included below. The current state of the robot is that it just needs the remaining 3D printed components installed and then it will be a purely software focused approach for the remaining month or so of this project's timeline. We have a fairly accurate human tracking program that runs on the PS2 camera we're using on the Pi using OpenCV libraries, but it needs fine tuning and we will soon also begin using the LiDAR alongside yet to be developed PID assisted drive code to make our robot drive autonomously. Here's a [link](https://github.com/angelika930/TrackBot) to the work in progress GitHub repository. 
+
+![[sengbotForward.mp4|800]]
