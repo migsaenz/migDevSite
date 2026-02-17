@@ -10,7 +10,7 @@ This project revolved around my creation of a sandbox environment, "HomeLab" or 
 
 ![[trackBotCurrent.png|800]]
 
-**Years Active:** 2025-Present <br>
+**Years Active:** 2025-2026 <br>
 Cal Poly requires a senior project or capstone project from most of its students preparing to graduate, and from Computer Science students like myself requires the completion of either a small project or limited scope research. As such, my partner and I both had a particular affinity for robotics, and so came to the idea of a small robot that would serve as a kind of stand-in for a traditional "pacemaker" in the world of running and track. This project is a work in progress, but the [[Senior Project TrackBot|writeup]] delves more deeply into the engineering design process, iteration, and (in the future) final robot alike.
 <br>**Relevant Skills:** RaspberryPi, Python, 3D Modeling, 3D Printing, Woodworking and Manufacturing, Soldering, Electronics Work. <br>
 
